@@ -1,0 +1,86 @@
+.notesCard {
+  max-width: 250px;
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 0.1px solid lightgray;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  &:hover {
+    box-shadow: 2px -1px 6px 0px lightgray;
+  }
+  h1 {
+    font-size: 1rem;
+    width: 90%;
+    margin: 5px auto;
+    margin-top: 10px;
+    height: 40px;
+    overflow: hidden;
+  }
+  p {
+    font-size: 0.875rem;
+    color: gray;
+    width: 90%;
+    margin: 6px auto;
+    height: 90px;
+    overflow: hidden;
+  }
+  .btnCont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 87%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    button {
+      background-color: white;
+      height: 40px;
+      width: 40px;
+      box-shadow: 5px 5px 45px lightgray;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+
+      &:first-child {
+        color: grey;
+        margin-right: 10px;
+        &:hover {
+          background-color: gray;
+          color: white;
+        }
+      }
+      &:nth-child(2) {
+        color: goldenrod;
+        margin-right: 10px;
+        &:hover {
+          background-color: goldenrod;
+          color: white;
+        }
+      }
+      &:last-child {
+        color: red;
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 250px) {
+  .notesCard {
+    .btnCont {
+      button {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}

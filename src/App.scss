@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+.notesSection {
+  height: 100vh;
+  width: 100%;
+  color: #282c34;
+  overflow: hidden;
+  .notesNav {
+    height: 40px;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    a {
+      background-color: none;
+      color: black;
+      border: 1px solid black;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      letter-spacing: 2px;
+      &:hover {
+        color: white;
+        background-color: black;
+        font-weight: bold;
+      }
+    }
+    button {
+      background: none;
+      color: green;
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      transition: all 0.3s ease-in-out;
+      #iconid {
+        font-size: 40px !important;
+      }
+      &:hover {
+        #iconid {
+          animation: App-logo-spin 0.3s linear;
+        }
+      }
+    }
+  }
+  .contentContainer {
+    height: calc(100vh - 80px);
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    .entryTitle {
+      font-weight: 700;
+      color: grey;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@media only screen and (max-width: 720px) {
+  .notesSection {
+    .contentContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media only screen and (max-width: 680px) {
+  .notesSection {
+    .notesNav {
+      a {
+        display: none;
+      }
+    }
+    .contentContainer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+@media only screen and (max-width: 250px) {
+  .notesSection {
+    .notesNav {
+      h1 {
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+  }
+}
